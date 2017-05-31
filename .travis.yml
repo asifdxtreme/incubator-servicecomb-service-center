@@ -32,7 +32,9 @@ script:
   - cp -r service-center/vendor/* src/
   - pwd
   - cd src
+  - ll
   - cd src/github.com/servicecomb/service-center
+  - 
   - touch coverage.out
   - go get -t -v ./...
   - go test -v -covermode=count -coverprofile=coverage.out ./...
