@@ -15,6 +15,11 @@ before_install:
   - docker ps -a
   - go get github.com/mattn/goveralls
   - go get golang.org/x/tools/cmd/cover
+  - go get github.com/tedsuo/rata
+  - go get github.com/onsi/ginkgo/config
+  - go get github.com/onsi/ginkgo/types
+  - go get github.com/onsi/ginkgo
+  - go get github.com/onsi/gomega/gbytes
   
 install: true
 
@@ -23,7 +28,10 @@ script:
   - cd ..
   - export NEWGOPATH=$(pwd)
   - export GOPATH=$GOPATH:$(pwd)
+  - pwd
   - cp -r service-center/vendor/* src/
+  - pwd
+  - cd src
   - cd src/github.com/servicecomb/service-center
   - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out ./...
