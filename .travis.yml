@@ -23,6 +23,7 @@ script:
   - cd ..
   - export NEWGOPATH=$(pwd)
   - export GOPATH=$GOPATH:$(pwd)
+  - cp -r service-center/vendor/* src/
   - cd src/github.com/servicecomb/service-center
   - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out ./...
