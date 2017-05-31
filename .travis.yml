@@ -35,6 +35,7 @@ script:
   - cd src
   - ls
   - cd github.com/servicecomb/service-center
+  - mkdir common/conf
   - cp etc/conf/app.conf common/conf/app.conf
   - cd common/cron
   - touch coverage.out
