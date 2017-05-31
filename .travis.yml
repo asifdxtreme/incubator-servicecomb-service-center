@@ -32,11 +32,10 @@ script:
   - cp -r service-center/vendor/* src/
   - pwd
   - cd src
-  - ll
+  - ls
   - cd src/github.com/servicecomb/service-center
   - 
   - touch coverage.out
-  - go get -t -v ./...
   - go test -v -covermode=count -coverprofile=coverage.out ./...
   - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
 
