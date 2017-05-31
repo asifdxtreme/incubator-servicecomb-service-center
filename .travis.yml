@@ -22,8 +22,9 @@ script:
   - bash +x scripts/build.sh
   - cd ..
   - export NEWGOPATH=$(pwd)
-  - export GOPATH=NEWGOPATH:$GOPATH
+  - export GOPATH=$(pwd)
   - cd src/github.com/servicecomb/service-center
+  - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out
   - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
 
