@@ -20,7 +20,10 @@ install: true
 
 script:
   - bash +x scripts/build.sh
-  - pwd
+  - cd ..
+  - export NEWGOPATH=$(pwd)
+  - export GOPATH=NEWGOPATH:$GOPATH
+  - $HOME/gopath/bin/goveralls -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
