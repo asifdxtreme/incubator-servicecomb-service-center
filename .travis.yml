@@ -24,7 +24,8 @@ script:
   - export NEWGOPATH=$(pwd)
   - export GOPATH=NEWGOPATH:$GOPATH
   - cd src/github.com/servicecomb/service-center
-  - $HOME/gopath/bin/goveralls -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
+  - go test -v -covermode=count -coverprofile=coverage.out
+  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
