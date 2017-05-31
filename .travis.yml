@@ -25,6 +25,8 @@ install: true
 
 script:
   - bash +x scripts/build.sh
+  - pwd
+  - ls
   - cd ..
   - export NEWGOPATH=$(pwd)
   - export GOPATH=$GOPATH:$(pwd)
