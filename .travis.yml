@@ -20,6 +20,7 @@ install: true
 
 script:
   - bash +x scripts/build.sh
+  - pwd
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
