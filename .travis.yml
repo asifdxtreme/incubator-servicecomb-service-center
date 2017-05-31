@@ -28,15 +28,15 @@ script:
   - pwd
   - ls
   - cd ..
-  - export NEWGOPATH=$(pwd)
   - export GOPATH=$GOPATH:$(pwd)
   - pwd
-  - cp -r service-center/vendor/* src/
+  - cp -r service-center/vendor/* src
   - pwd
   - cd src
   - ls
   - cd github.com/servicecomb/service-center
-  - 
+  - cp etc/conf/app.conf common/conf/app.conf
+  - cd common/cron
   - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out ./...
   - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
