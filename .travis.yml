@@ -35,7 +35,7 @@ script:
   - pwd
   - cd src
   - ls
-  - cd src/github.com/servicecomb/service-center
+  - cd github.com/servicecomb/service-center
   - 
   - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out ./...
