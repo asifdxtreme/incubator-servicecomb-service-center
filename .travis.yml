@@ -38,7 +38,7 @@ script:
   - cp etc/conf/app.conf common/conf/app.conf
   - cd common/cron
   - touch coverage.out
-  - go test -v -covermode=count -coverprofile=coverage.out ./...
+  - ginkgo -r -v -cover -coverprofile=coverage.out ./... 
   - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
 
 after_success:
