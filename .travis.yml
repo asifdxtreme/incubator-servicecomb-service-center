@@ -22,7 +22,7 @@ script:
   - bash +x scripts/build.sh
   - cd ..
   - export NEWGOPATH=$(pwd)
-  - export GOPATH=$(pwd)
+  - export GOPATH=$GOPATH:$(pwd)
   - cd src/github.com/servicecomb/service-center
   - touch coverage.out
   - go test -v -covermode=count -coverprofile=coverage.out ./...
