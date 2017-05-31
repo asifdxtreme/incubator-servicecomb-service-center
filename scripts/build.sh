@@ -7,3 +7,5 @@ cp -r $OLD_PATH/*  $BUILD_TEMP_PATH
 export GOPATH=$(pwd)
 cd $BUILD_TEMP_PATH
 CGO_ENABLED=0 GO_EXTLINK_ENABLED=0 go build --ldflags '-w -extldflags "-static"' -o servicecenter
+
+$HOME/gopath/bin/goveralls -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
