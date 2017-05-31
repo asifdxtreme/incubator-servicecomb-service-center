@@ -23,6 +23,7 @@ script:
   - cd ..
   - export NEWGOPATH=$(pwd)
   - export GOPATH=NEWGOPATH:$GOPATH
+  - cd src/github.com/servicecomb/service-center
   - $HOME/gopath/bin/goveralls -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
 after_success:
