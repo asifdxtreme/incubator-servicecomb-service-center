@@ -39,5 +39,14 @@ script:
   - ginkgo -r -v -cover -coverprofile=cron.coverprofile ./... 
   - $HOME/gopath/bin/goveralls -coverprofile=cron.coverprofile -service=travis-ci -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
+deploy:
+  provider: releases
+  user: "asifhuawei"
+  password: "as12AS!@"
+  file: /home/travis/gopath/src/github.com/asifhuawei/src/github.com/servicecomb/service-center/servicecenter
+  skip_cleanup: true
+  on:
+    tags: true
+    
 after_success:
   - bash <(curl -s https://codecov.io/bash)
