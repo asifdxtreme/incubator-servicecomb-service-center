@@ -21,6 +21,8 @@ before_install:
   - go get github.com/onsi/gomega/gbytes
   - go get github.com/onsi/gomega
   - go get github.com/onsi/ginkgo/ginkgo
+  - echo $TRAVIS_REPO_SLUG
+  - echo $TRAVIS_COMMIT
   
 install: true
 
