@@ -7,7 +7,6 @@ services:
 
 go:
   - 1.7.3
-  - tip
 
 before_install:
   - export HostIP="192.168.12.50"
