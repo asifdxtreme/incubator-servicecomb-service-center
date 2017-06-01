@@ -26,24 +26,14 @@ install: true
 
 script:
   - bash +x scripts/build.sh
-  - pwd
-  - ls
   - cd ..
   - export GOPATH=$GOPATH:$(pwd)
-  - pwd
   - cp -r service-center/vendor/* src
-  - pwd
-  - cd src
-  - ls
-  - cd github.com/servicecomb/service-center
+  - cd src/github.com/servicecomb/service-center
   - mkdir common/cron/conf/
   - cp etc/conf/app.conf common/cron/conf/app.conf
   - cd common/cron
-  - touch coverage.out
   - ginkgo -r -v -cover -coverprofile=cron.coverprofile ./... 
-  - pwd
-  - ls
-  - cat coverage.out
   - $HOME/gopath/bin/goveralls -coverprofile=cron.coverprofile -service=travis-ci -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
 after_success:
