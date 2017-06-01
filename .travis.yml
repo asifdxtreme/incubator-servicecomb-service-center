@@ -41,10 +41,11 @@ script:
   - cp etc/conf/app.conf common/cron/conf/app.conf
   - cd common/cron
   - touch coverage.out
-  - ginkgo -r -v -cover -coverprofile=coverage.out ./... 
+  - ginkgo -r -v -cover -coverprofile=cron.coverprofile ./... 
   - pwd
+  - ls
   - cat coverage.out
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
+  - $HOME/gopath/bin/goveralls -coverprofile=cron.coverprofile -service=travis-ci -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
