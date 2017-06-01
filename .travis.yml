@@ -42,7 +42,9 @@ script:
   - cd common/cron
   - touch coverage.out
   - ginkgo -r -v -cover -coverprofile=coverage.out ./... 
-  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci 
+  - pwd
+  - cat coverage.out
+  - $HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken O04ikci0NXVZLDXJinpl79tcQvoenip2C
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
