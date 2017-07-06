@@ -36,7 +36,7 @@ jobs:
       script: CGO_ENABLED=0 GO_EXTLINK_ENABLED=0 go build --ldflags '-w -extldflags "-static"' -o servicecenter
     - stage: Unit Testing
       script: bash -x tests/scripts/ut_test_in_docker.sh && $HOME/gopath/bin/goveralls -coverprofile=coverage.txt -service=travis-ci
-    - stage: Building Service Center
+    - stage: Integration Testing
       script: bash -x tests/scripts/integration_test.sh    
 
 after_success:
