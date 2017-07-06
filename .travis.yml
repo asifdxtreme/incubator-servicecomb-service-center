@@ -25,12 +25,11 @@ install: true
 
 jobs:
   include:
-    script: 
-      - mkdir -p $HOME/gopath/src/github.com/servicecomb/service-center
-      - rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/servicecomb/service-center/
-      - export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/servicecomb/service-center
-      - cd $HOME/gopath/src/github.com/servicecomb/service-center
-      - gvt restore
+    - script: mkdir -p $HOME/gopath/src/github.com/servicecomb/service-center
+    - script: rsync -az ${TRAVIS_BUILD_DIR}/ $HOME/gopath/src/github.com/servicecomb/service-center/
+    - script: export TRAVIS_BUILD_DIR=$HOME/gopath/src/github.com/servicecomb/service-center
+    - script: cd $HOME/gopath/src/github.com/servicecomb/service-center
+    - script: gvt restore
     - stage: Building Service Center
       script: 
         - CGO_ENABLED=0 GO_EXTLINK_ENABLED=0 go build --ldflags '-w -extldflags "-static"' -o servicecenter
