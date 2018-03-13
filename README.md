@@ -1,5 +1,6 @@
 # Apache-Incubator-ServiceComb-Service-Center 
-[![Build Status](https://www.travis-ci.org/apache/incubator-servicecomb-service-center.svg?branch=master)](https://www.travis-ci.org/apache/incubator-servicecomb-service-center)  [![Coverage Status](https://coveralls.io/repos/github/apache/incubator-servicecomb-service-center/badge.svg?branch=master)](https://coveralls.io/github/apache/incubator-servicecomb-service-center?branch=master)  [![Go Report Card](https://goreportcard.com/badge/github.com/apache/incubator-servicecomb-service-center)](https://goreportcard.com/report/github.com/apache/incubator-servicecomb-service-center) [![GoDoc](https://godoc.org/github.com/apache/incubator-servicecomb-service-center?status.svg)](https://godoc.org/github.com/apache/incubator-servicecomb-service-center)  [![HitCount](http://hits.dwyl.io/apache/incubator-servicecomb-service-center.svg)](http://hits.dwyl.io/apache/incubator-servicecomb-service-center)  
+[![Build Status](https://www.travis-ci.org/apache/incubator-servicecomb-service-center.svg?branch=master)](https://www.travis-ci.org/apache/incubator-servicecomb-service-center) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fasifdxtreme%2Fincubator-servicecomb-service-center.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fasifdxtreme%2Fincubator-servicecomb-service-center?ref=badge_shield)
+ [![Coverage Status](https://coveralls.io/repos/github/apache/incubator-servicecomb-service-center/badge.svg?branch=master)](https://coveralls.io/github/apache/incubator-servicecomb-service-center?branch=master)  [![Go Report Card](https://goreportcard.com/badge/github.com/apache/incubator-servicecomb-service-center)](https://goreportcard.com/report/github.com/apache/incubator-servicecomb-service-center) [![GoDoc](https://godoc.org/github.com/apache/incubator-servicecomb-service-center?status.svg)](https://godoc.org/github.com/apache/incubator-servicecomb-service-center)  [![HitCount](http://hits.dwyl.io/apache/incubator-servicecomb-service-center.svg)](http://hits.dwyl.io/apache/incubator-servicecomb-service-center)  
 
 Apache ServiceComb (incubating) service-center allows services to register their instance information and to discover providers of a given service. 
 ## Features
@@ -149,3 +150,7 @@ See [Contribution guide](/docs/contribution.md) for details on submitting patche
 ## Reporting Issues
 
 See reporting bugs for details about reporting any issues.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fasifdxtreme%2Fincubator-servicecomb-service-center.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fasifdxtreme%2Fincubator-servicecomb-service-center?ref=badge_large)
